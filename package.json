@@ -1,0 +1,15 @@
+{
+  "name": "release-namer",
+  "version": "1.0.0",
+  "description": "tool for generating random release names",
+  "author": "tadger",
+  "license": "MIT",
+  "keywords": [],
+  "main": "/",
+  "bin": "./index.js",
+  "dependencies": {
+    "boxen": "^2.1.0",
+    "chalk": "^2.4.1",
+    "haikunator": "^2.0.0"
+  }
+}
