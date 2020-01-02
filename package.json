@@ -1,8 +1,9 @@
 {
   "name": "release-namer",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "tool for generating random release names",
   "author": "tadger",
+  "repository": "https://github.com/tadger/release-namer",
   "license": "MIT",
   "keywords": [],
   "main": "/",
