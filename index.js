@@ -1,12 +1,14 @@
 #!/usr/bin/env node
 
 const Haikunator = require('haikunator')
+const adjectives = require('adjectives')
 const boxen = require('boxen')
 const chalk = require('chalk')
 const { bold } = require('chalk').default
 const { name, version } = require('./package.json')
 
 const haikunator = new Haikunator({
+  adjectives,
   seed: new Date().getTime().toString(),
   defaults: {
     tokenLength: 0
