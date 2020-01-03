@@ -6,6 +6,12 @@
   "repository": "https://github.com/tadger/release-namer",
   "license": "MIT",
   "keywords": [],
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "commit": "npx git-cz",
+    "start": "nodemon index"
+  },
   "main": "/",
   "bin": "./index.js",
   "dependencies": {
@@ -13,5 +19,10 @@
     "boxen": "^2.1.0",
     "chalk": "^2.4.1",
     "haikunator": "^2.0.0"
+  },
+  "devDependencies": {
+    "jest": "24.9.0",
+    "nodemon": "2.0.2",
+    "prettier": "^1.19.1"
   }
 }
