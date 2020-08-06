@@ -1,6 +1,6 @@
 {
   "name": "release-namer",
-  "version": "1.5.0",
+  "version": "2.0.0",
   "description": "tool for generating random release names",
   "author": "tadger",
   "repository": "https://github.com/tadger/release-namer",
