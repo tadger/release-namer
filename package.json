@@ -10,10 +10,12 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "commit": "npx git-cz",
-    "start": "nodemon src"
+    "start": "nodemon src/cli"
   },
   "main": "/",
-  "bin": "./src/index.js",
+  "bin": {
+    "name-generator": "./src/cli.js"
+  },
   "dependencies": {
     "boxen": "^4.2.0",
     "chalk": "^4.1.0",
