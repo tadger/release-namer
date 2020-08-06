@@ -14,7 +14,7 @@
   },
   "main": "/",
   "bin": {
-    "name-generator": "./src/cli.js"
+    "release-namer": "./src/cli.js"
   },
   "dependencies": {
     "boxen": "^4.2.0",
