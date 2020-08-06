@@ -5,7 +5,7 @@ const Haikunator = require('haikunator')
 const { rawData } = require('namor')
 const boxen = require('boxen')
 const chalk = require('chalk')
-const { bold } = require('chalk').default
+const { bold } = require('chalk')
 const { name, version } = require(path.resolve(process.cwd(), 'package.json'))
 
 const { nouns, adjectives } = rawData.manly
