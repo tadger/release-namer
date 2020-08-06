@@ -1,14 +1,18 @@
 #!/usr/bin/env node
 
+const path = require('path')
 const Haikunator = require('haikunator')
-const adjectives = require('adjectives')
+const { rawData } = require('namor')
 const boxen = require('boxen')
 const chalk = require('chalk')
 const { bold } = require('chalk').default
-const { name, version } = require('../package.json')
+const { name, version } = require(path.resolve(process.cwd(), 'package.json'))
+
+const { nouns, adjectives } = rawData.manly
 
 const haikunator = new Haikunator({
   adjectives,
+  nouns,
   seed: new Date().getTime().toString(),
   defaults: {
     tokenLength: 0,

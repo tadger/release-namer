@@ -10,15 +10,16 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "commit": "npx git-cz",
-    "start": "nodemon index"
+    "start": "nodemon index",
+    "dev": "nodemon src/index"
   },
   "main": "/",
   "bin": "./index.js",
   "dependencies": {
-    "adjectives": "^1.0.2",
     "boxen": "^2.1.0",
     "chalk": "^2.4.1",
-    "haikunator": "^2.0.0"
+    "haikunator": "^2.0.0",
+    "namor": "^2.0.2"
   },
   "devDependencies": {
     "jest": "24.9.0",
