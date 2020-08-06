@@ -5,7 +5,7 @@ const boxen = require('boxen')
 const chalk = require('chalk')
 const { bold } = require('chalk')
 const { generate } = require('./generate')
-const { name, version } = require(path.resolve(process.cwd(), 'package.json'))
+const { name, version } = require(path.resolve(__dirname, '../package.json'))
 
 const strong = '#f36'
 const muted = '#999'
