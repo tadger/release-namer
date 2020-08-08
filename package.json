@@ -1,5 +1,5 @@
 {
-  "name": "release-namer",
+  "name": "@farts/release-namer",
   "version": "2.1.1",
   "description": "tool for generating random release names",
   "author": "tadger",
