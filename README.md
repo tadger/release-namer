@@ -6,20 +6,20 @@ A tool for generating random release names
 ## Usage in JavaScript:
 
 ```bash
-$ npm install release-namer
+$ npm install @farts/release-namer
 ```
 
 ```javascript
-const { generate } = require('release-namer')
+const { generate } = require('@farts/release-namer')
 
 // es6
-import { generate } from 'release-namer'
+import { generate } from '@farts/release-namer'
 ```
 
 ## Usage globally:
 
 ```bash
-$ npm install -g release-namer
+$ npm install -g @farts/release-namer
 
 $ release-namer
 ```
@@ -27,5 +27,5 @@ $ release-namer
 ### ... or just:
 
 ```bash
-$ npx release-namer
+$ npx @farts/release-namer
 ```
