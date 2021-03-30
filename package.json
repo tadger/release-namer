@@ -1,6 +1,6 @@
 {
   "name": "@farts/release-namer",
-  "version": "2.1.2",
+  "version": "2.2.0",
   "description": "tool for generating random release names",
   "author": "tadger",
   "repository": "https://github.com/tadger/release-namer",
@@ -14,7 +14,7 @@
   },
   "main": "/",
   "bin": {
-    "release-namer": "./src/cli.js"
+    "release-namer": "src/cli.js"
   },
   "dependencies": {
     "boxen": "^4.2.0",
