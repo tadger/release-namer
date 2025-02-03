@@ -1,9 +1,12 @@
 {
   "name": "@farts/release-namer",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "A tool for generating random release names",
   "author": "tadger",
-  "repository": "https://github.com/tadger/release-namer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tadger/release-namer"
+  },
   "license": "MIT",
   "keywords": [],
   "type": "module",

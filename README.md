@@ -1,9 +1,7 @@
 # release-namer
 A tool for generating random release names
 
-[![Build Status](https://travis-ci.com/tadger/release-namer.svg?branch=master)](https://travis-ci.com/tadger/release-namer)
-
-## Usage in JavaScript:
+## Usage in JavaScript/Typescript:
 
 ```bash
 $ npm install @farts/release-namer
@@ -16,11 +14,12 @@ const { generate } = require('@farts/release-namer')
 import { generate } from '@farts/release-namer'
 ```
 
-## Usage globally:
+## Global CLI usage:
 
 ```bash
 $ npm install -g @farts/release-namer
 
+# once installed, use it from any terminal session
 $ release-namer
 ```
 
@@ -29,3 +28,7 @@ $ release-namer
 ```bash
 $ npx @farts/release-namer
 ```
+
+## Flags (only available using CLI):
+
+`--plain-text` or `-t`: Removes the default formatting and simply writes a plain-text string to `stdout` *(This is useful for scripts or CI actions that need to generate a name for a release)*
