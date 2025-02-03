@@ -1,6 +1,5 @@
-'use strict'
-
-const { generate } = require('./generate')
+import { describe, expect, test } from 'vitest'
+import { generate } from './generate.js'
 
 describe('release-namer', () => {
   test('should render a name', async () => {

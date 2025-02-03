@@ -1,0 +1,132 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "files": {
+    "ignore": ["dist", "node_modules/*", "coverage/*", "LICENSE.md", "CHANGELOG.md", "package.json", ".vscode/*"]
+  },
+  "formatter": {
+    "enabled": true,
+    "formatWithErrors": false,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 80
+  },
+  "javascript": {
+    "formatter": {
+      "arrowParentheses": "asNeeded",
+      "bracketSameLine": false,
+      "enabled": true,
+      "quoteProperties": "preserve",
+      "quoteStyle": "single",
+      "semicolons": "asNeeded",
+      "trailingCommas": "all"
+    },
+    "globals": ["JSX"]
+  },
+  "json": {
+    "formatter": {
+      "enabled": true,
+      "indentStyle": "space",
+      "indentWidth": 2,
+      "lineWidth": 300
+    },
+    "parser": {
+      "allowComments": true
+    }
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "a11y": {
+        "useValidAriaRole": {
+          "level": "warn",
+          "options": {
+            "allowInvalidRoles": [],
+            "ignoreNonDom": true
+          }
+        }
+      },
+      "complexity": {
+        "noUselessTernary": "error"
+      },
+      "correctness": {
+        "noUndeclaredVariables": "error",
+        "noUnusedImports": "error",
+        "useHookAtTopLevel": "error",
+        "useExhaustiveDependencies": "error",
+        "useImportExtensions": {
+          "level": "error",
+          "options": {
+            "suggestedExtensions": {
+              "ts": {
+                "module": "js",
+                "component": "js"
+              },
+              "tsx": {
+                "module": "js",
+                "component": "js"
+              }
+            }
+          }
+        }
+      },
+      "nursery": {},
+      "performance": {
+        "noAccumulatingSpread": "warn",
+        "noDelete": "off"
+      },
+      "recommended": true,
+      "style": {
+        "noDefaultExport": "error",
+        "noInferrableTypes": "warn",
+        "noUnusedTemplateLiteral": "off",
+        "noUselessElse": "warn",
+        "useSingleCaseStatement": "off",
+        "useImportType": "error",
+        "useExportType": "error",
+        "useShorthandFunctionType": "error",
+        "useNodejsImportProtocol": "off",
+        "useNumberNamespace": "error"
+      },
+      "suspicious": {
+        "noArrayIndexKey": "off",
+        "noAssignInExpressions": "off",
+        "noDuplicateObjectKeys": "error",
+        "noEmptyInterface": "warn",
+        "noExplicitAny": "off",
+        "noImplicitAnyLet": "error",
+        "noPrototypeBuiltins": "off",
+        "useAwait": "error"
+      }
+    }
+  },
+  "organizeImports": {
+    "enabled": true
+  },
+  "overrides": [
+    {
+      "include": ["*.spec.*", "*.test.*"],
+      "linter": {
+        "rules": {
+          "a11y": {
+            "all": false,
+            "recommended": false,
+            "useKeyWithClickEvents": "off"
+          },
+          "correctness": {
+            "noUndeclaredVariables": "off"
+          },
+          "style": {
+            "noUnusedTemplateLiteral": "off",
+            "useSelfClosingElements": "off"
+          },
+          "suspicious": {
+            "noArrayIndexKey": "warn",
+            "noEmptyInterface": "warn",
+            "noExplicitAny": "off",
+            "useAwait": "off"
+          }
+        }
+      }
+    }
+  ]
+}

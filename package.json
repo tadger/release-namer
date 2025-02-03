@@ -1,30 +1,58 @@
 {
   "name": "@farts/release-namer",
-  "version": "3.1.0",
-  "description": "tool for generating random release names",
+  "version": "4.0.0",
+  "description": "A tool for generating random release names",
   "author": "tadger",
   "repository": "https://github.com/tadger/release-namer",
   "license": "MIT",
   "keywords": [],
+  "type": "module",
   "scripts": {
-    "test": "jest",
-    "test:watch": "jest --watch",
+    "build": "pkgroll",
+    "ci:validate": "npm run type-check && biome ci --log-level=error --log-kind=pretty --diagnostic-level=error .",
+    "cli": "tsx src/cli.ts",
+    "cli:dist": "node ./dist/cli.mjs",
     "commit": "npx git-cz",
-    "start": "nodemon src/cli"
+    "format": "biome check --log-level=error --log-kind=pretty --diagnostic-level=error --write .",
+    "start": "nodemon src/cli.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "type-check": "tsc"
   },
-  "main": "/",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.cts",
   "bin": {
-    "release-namer": "src/cli.js"
+    "release-namer": "./dist/cli.mjs"
+  },
+  "exports": {
+    "require": {
+      "types": "./dist/index.d.cts",
+      "default": "./dist/index.cjs"
+    },
+    "import": {
+      "types": "./dist/index.d.mts",
+      "default": "./dist/index.mjs"
+    }
+  },
+  "engines": {
+    "node": ">=22.0.0",
+    "npm": ">=10.0.0"
   },
   "dependencies": {
-    "boxen": "^4.2.0",
-    "chalk": "^4.1.0",
+    "boxen": "^8.0.1",
+    "chalk": "^5.4.1",
     "haikunator": "^2.1.2",
-    "namor": "^2.0.2"
+    "meow": "^13.2.0",
+    "namor": "^3.0.1"
   },
   "devDependencies": {
-    "jest": "26.2.2",
-    "nodemon": "2.0.4",
-    "prettier": "^2.0.5"
+    "@biomejs/biome": "1.9.4",
+    "cross-env": "^7.0.3",
+    "nodemon": "3.1.9",
+    "pkgroll": "2.6.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "vitest": "3.0.4"
   }
 }
