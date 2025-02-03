@@ -1,11 +1,11 @@
-const Haikunator = require('haikunator')
-const { rawData } = require('namor')
+import Haikunator, { type Config } from 'haikunator'
+import * as namor from 'namor'
 
 const defaultConfig = { tokenLength: 0, delimiter: '-' }
 
-function generate(config) {
+export function generate(config?: Partial<Config>) {
   const params = { ...defaultConfig, ...config }
-  const { nouns, adjectives } = rawData.manly
+  const { nouns, adjectives } = namor.rawData.rugged
 
   const haikunator = new Haikunator({
     adjectives,
@@ -18,5 +18,3 @@ function generate(config) {
 
   return haikunator.haikunate(params)
 }
-
-exports.generate = generate

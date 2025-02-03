@@ -4,6 +4,8 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+yarn.lock
+.yarn-integrity
 lerna-debug.log*
 
 build
@@ -18,5 +20,3 @@ dist
 
 .npm
 .eslintcache
-package-lock.json
-.yarn-integrity
