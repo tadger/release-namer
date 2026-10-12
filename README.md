@@ -32,3 +32,11 @@ $ npx @farts/release-namer
 ## Flags (only available using CLI):
 
 `--plain-text` or `-t`: Removes the default formatting and simply writes a plain-text string to `stdout` *(This is useful for scripts or CI actions that need to generate a name for a release)*
+## Local development
+
+```sh
+npm run generate                      # one name from the built-in lists
+npm run generate -- -n 5 -d _         # five names joined with "_"
+npm run generate -- -a adj.txt -o nouns.txt
+npm run generate -- --help
+```

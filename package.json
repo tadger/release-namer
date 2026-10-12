@@ -14,6 +14,7 @@
     "build": "pkgroll",
     "ci:validate": "npm run type-check && biome ci --log-level=error --log-kind=pretty --diagnostic-level=error .",
     "cli": "tsx src/cli.ts",
+    "generate": "tsx src/dev.ts",
     "cli:dist": "node ./dist/cli.mjs",
     "commit": "npx git-cz",
     "format": "biome check --log-level=error --log-kind=pretty --diagnostic-level=error --write .",
