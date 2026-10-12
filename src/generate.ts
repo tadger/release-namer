@@ -1,11 +1,11 @@
 import Haikunator, { type Config } from 'haikunator'
-import * as namor from 'namor'
+import { adjectives } from './words/adjectives.js'
+import { nouns } from './words/nouns.js'
 
 const defaultConfig = { tokenLength: 0, delimiter: '-' }
 
 export function generate(config?: Partial<Config>) {
   const params = { ...defaultConfig, ...config }
-  const { nouns, adjectives } = namor.rawData.rugged
 
   const haikunator = new Haikunator({
     adjectives,

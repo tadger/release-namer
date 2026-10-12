@@ -45,8 +45,7 @@
     "boxen": "^8.0.1",
     "chalk": "^5.4.1",
     "haikunator": "^2.1.2",
-    "meow": "^13.2.0",
-    "namor": "^3.0.1"
+    "meow": "^13.2.0"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
