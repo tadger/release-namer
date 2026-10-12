@@ -1,4 +1,4 @@
-#!/usr/bin/env ts-node
+#!/usr/bin/env node
 
 import { readFileSync } from 'fs'
 import * as path from 'path'

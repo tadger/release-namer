@@ -17,10 +17,9 @@
     "cli:dist": "node ./dist/cli.mjs",
     "commit": "npx git-cz",
     "format": "biome check --log-level=error --log-kind=pretty --diagnostic-level=error --write .",
-    "start": "nodemon src/cli.js",
     "test": "vitest run",
     "test:watch": "vitest",
-    "type-check": "tsc"
+    "type-check": "tsc --noEmit"
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
@@ -39,7 +38,7 @@
     }
   },
   "engines": {
-    "node": ">=22.0.0",
+    "node": ">=24",
     "npm": ">=10.0.0"
   },
   "dependencies": {
@@ -51,11 +50,15 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
+    "@types/node": "^24.19.2",
     "cross-env": "^7.0.3",
-    "nodemon": "3.1.9",
-    "pkgroll": "2.6.1",
+    "pkgroll": "2.28.1",
     "tsx": "^4.19.2",
     "typescript": "^5.7.3",
-    "vitest": "3.0.4"
-  }
+    "vitest": "5.0.3"
+  },
+  "files": [
+    "dist",
+    "!dist/**/*.test.*"
+  ]
 }
