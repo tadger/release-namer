@@ -5,7 +5,7 @@
   "author": "tadger",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tadger/release-namer"
+    "url": "git+https://github.com/tadger/release-namer.git"
   },
   "license": "MIT",
   "keywords": [],
@@ -25,7 +25,7 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.cts",
   "bin": {
-    "release-namer": "./dist/cli.mjs"
+    "release-namer": "dist/cli.mjs"
   },
   "exports": {
     "require": {
